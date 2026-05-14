@@ -54,3 +54,9 @@ class Biblioteca:
 
     def tamanho(self):
         return self._tamanho
+
+    def __iter__(self):
+        atual = self._cabeca
+        while atual is not None:
+            yield atual.musica
+            atual = atual.proximo

@@ -29,3 +29,9 @@ class Fila:
 
     def tamanho(self):
         return self._tamanho
+
+    def __iter__(self):
+        atual = self._inicio
+        while atual is not None:
+            yield atual.musica
+            atual = atual.proximo
